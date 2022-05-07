@@ -28,7 +28,7 @@ const CompareProducts = () => {
                                         <h4>Compare Products</h4>
                                     </div>
                                     <div className="card-body-blk">
-                                        <div className="custom-accordion">Products to compare</div>
+                                        <div className="custom-accordion">Products to be compared</div>
                                     </div>
                                 </div>
                             </div>
