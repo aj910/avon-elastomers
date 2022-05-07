@@ -2,7 +2,7 @@ import { Accordion, Form } from 'react-bootstrap';
 import SidebarFilterAttributeContainer from './sidebar-filter-attributes-container.component';
 import SidebarFilterCategoryItem from './sidebar-filter-category-item.component';
 
-const SidebarFilterContainer = ({ categories, attributes, categoryIds, setCategoryIds, attributeIds, setAttributeIds }) => {
+const SidebarFilterContainer = ({ categories, attributes, prices, categoryIds, setCategoryIds, priceIds, setPriceIds, attributeIds, setAttributeIds }) => {
   return (
     <div className="sidebar-block">
       <div className="side-head-blk">FILTER BY</div>
@@ -15,9 +15,9 @@ const SidebarFilterContainer = ({ categories, attributes, categoryIds, setCatego
                 {categories.map((category) => (
                   <SidebarFilterCategoryItem key={category.id} category={category} categoryIds={categoryIds} setCategoryIds={setCategoryIds} />
                 ))}
-               
+
               </Form>
-        
+
             </Accordion.Body>
           </Accordion.Item>
           {attributes.map((attribute) => (
@@ -27,8 +27,16 @@ const SidebarFilterContainer = ({ categories, attributes, categoryIds, setCatego
             <Accordion.Header>Price</Accordion.Header>
             {/* <Accordion.Body>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</Accordion.Body> */}
             <Accordion.Body>Lorem Ipsum</Accordion.Body>
+
+            {/* {prices.map((price) => (
+
+              <SidebarFilterCategoryItem key={price.id} price={price} priceIds={priceIds} setPriceIds={setPriceIds} />
+
+            ))} */}
+
+
           </Accordion.Item>
-          
+
         </Accordion>
       </div>
     </div>
