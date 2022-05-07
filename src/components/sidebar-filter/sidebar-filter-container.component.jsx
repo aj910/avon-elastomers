@@ -2,6 +2,7 @@ import { Accordion, Form } from 'react-bootstrap';
 import SidebarFilterAttributeContainer from './sidebar-filter-attributes-container.component';
 import SidebarFilterCategoryItem from './sidebar-filter-category-item.component';
 
+
 const SidebarFilterContainer = ({ categories, attributes, prices, categoryIds, setCategoryIds, priceIds, setPriceIds, attributeIds, setAttributeIds }) => {
   return (
     <div className="sidebar-block">
@@ -25,14 +26,19 @@ const SidebarFilterContainer = ({ categories, attributes, prices, categoryIds, s
           ))}
           <Accordion.Item eventKey="1">
             <Accordion.Header>Price</Accordion.Header>
-            {/* <Accordion.Body>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</Accordion.Body> */}
-            <Accordion.Body>Lorem Ipsum</Accordion.Body>
 
-            {/* {prices.map((price) => (
+            {/* <Accordion.Body>Lorem Ipsum</Accordion.Body> */}
 
-              <SidebarFilterCategoryItem key={price.id} price={price} priceIds={priceIds} setPriceIds={setPriceIds} />
+            <Accordion.Body>
+              {prices.map((price) => (
 
-            ))} */}
+                <SidebarFilterAttributeContainer key={price.id} prices={price} priceIds={priceIds} setPriceIds={setPriceIds} />
+
+              ))}
+            </Accordion.Body>
+
+
+
 
 
           </Accordion.Item>
